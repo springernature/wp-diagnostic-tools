@@ -1208,7 +1208,7 @@
         <li><a href="https://www.mydevice.io/">mydevice.io : web devices capabilities</a></li>
     </ul>
     <div>
-        <form action="#">
+        <form id="form_select" action="#">
             <label for="lang">Language</label>
             <select name="options" id="lang">
                 <option value="yes">yes</option>
@@ -1216,9 +1216,20 @@
                 <option value="maybe">maybe</option>
                 <option value="pass">pass</option>
             </select>
+            <radio></radio>
             <input type="submit" value="Submit" />
         </form>
     </div>
+    <div>
+        <form id="form_radio">
+            <input type="radio" id="radio_1" name="radio" value="yes" />
+            <label for="radio_1">Yes</label>
+            <input type="radio" id="radio_2" name="radio" value="no" />
+            <label for="radio_2">No</label>
+            <input type="radio" id="radio_3" name="radio" value="maybe" />
+            <label for="radio_3">Maybe</label>
+      </form>
+    </div>    
 </body>
 
 </html>
