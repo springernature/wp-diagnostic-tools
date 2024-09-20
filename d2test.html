@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic links and tools</title>
+    <style>
+        /*
+ * The default style sheet used to render HTML.
+ *
+ * Copyright (C) 2000 Lars Knoll (knoll@kde.org)
+ * Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011 Apple Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public License
+ * along with this library; see the file COPYING.LIB.  If not, write to
+ * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
+ *
+ */
+    @namespace "http://www.w3.org/1999/xhtml";
+
+    html {
+        display: block
+    }
+
+    /* children of the <head> element all have display:none */
+    head {
+        display: none
+    }
+
+    meta {
+        display: none
+    }
+
+    title {
+        display: none
+    }
+
+    link {
+        display: none
+    }
+
+    style {
+        display: none
+    }
+
+    script {
+        display: none
+    }
+
+    /* generic block-level elements */
+    body {
+        display: block;
+        margin: 8px
+    }
+
+    body:-webkit-full-page-media {
+        background-color: rgb(0, 0, 0)
+    }
+
+    p {
+        display: block;
+        -webkit-margin-before: 1__qem;
+        -webkit-margin-after: 1__qem;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+    }
+
+    div {
+        display: block
+    }
+
+    layer {
+        display: block
+    }
+
+    article,
+    aside,
+    footer,
+    header,
+    hgroup,
+    main,
+    nav,
+    section {
+        display: block
+    }
+
+    marquee {
+        display: inline-block;
+    }
+
+    address {
+        display: block
+    }
+
+    blockquote {
+        display: block;
+        -webkit-margin-before: 1__qem;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 40px;
+        -webkit-margin-end: 40px;
+    }
+
+    figcaption {
+        display: block
+    }
+
+    figure {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 40px;
+        -webkit-margin-end: 40px;
+    }
+
+    q {
+        display: inline
+    }
+
+    q:before {
+        content: open-quote;
+    }
+
+    q:after {
+        content: close-quote;
+    }
+
+    center {
+        display: block;
+        /* special centering to be able to emulate the html4/netscape behaviour */
+        text-align: -webkit-center
+    }
+
+    hr {
+        display: block;
+        -webkit-margin-before: 0.5em;
+        -webkit-margin-after: 0.5em;
+        -webkit-margin-start: auto;
+        -webkit-margin-end: auto;
+        border-style: inset;
+        border-width: 1px
+    }
+
+    map {
+        display: inline
+    }
+
+    video {
+        object-fit: contain;
+    }
+
+    /* heading elements */
+    h1 {
+        display: block;
+        font-size: 2em;
+        -webkit-margin-before: 0.67__qem;
+        -webkit-margin-after: 0.67em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        font-weight: bold
+    }
+
+    :-webkit-any(article, aside, nav, section) h1 {
+        font-size: 1.5em;
+        -webkit-margin-before: 0.83__qem;
+        -webkit-margin-after: 0.83em;
+    }
+
+    :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) h1 {
+        font-size: 1.17em;
+        -webkit-margin-before: 1__qem;
+        -webkit-margin-after: 1em;
+    }
+
+    :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) h1 {
+        font-size: 1.00em;
+        -webkit-margin-before: 1.33__qem;
+        -webkit-margin-after: 1.33em;
+    }
+
+    :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) h1 {
+        font-size: .83em;
+        -webkit-margin-before: 1.67__qem;
+        -webkit-margin-after: 1.67em;
+    }
+
+    :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) :-webkit-any(article, aside, nav, section) h1 {
+        font-size: .67em;
+        -webkit-margin-before: 2.33__qem;
+        -webkit-margin-after: 2.33em;
+    }
+
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        -webkit-margin-before: 0.83__qem;
+        -webkit-margin-after: 0.83em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        font-weight: bold
+    }
+
+    h3 {
+        display: block;
+        font-size: 1.17em;
+        -webkit-margin-before: 1__qem;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        font-weight: bold
+    }
+
+    h4 {
+        display: block;
+        -webkit-margin-before: 1.33__qem;
+        -webkit-margin-after: 1.33em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        font-weight: bold
+    }
+
+    h5 {
+        display: block;
+        font-size: .83em;
+        -webkit-margin-before: 1.67__qem;
+        -webkit-margin-after: 1.67em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        font-weight: bold
+    }
+
+    h6 {
+        display: block;
+        font-size: .67em;
+        -webkit-margin-before: 2.33__qem;
+        -webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        font-weight: bold
+    }
+
+    /* tables */
+    table {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: gray
+    }
+
+    thead {
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit
+    }
+
+    tfoot {
+        display: table-footer-group;
+        vertical-align: middle;
+        border-color: inherit
+    }
+
+    /* for tables without table section elements (can happen with XHTML or dynamically created tables) */
+    table>tr {
+        vertical-align: middle;
+    }
+
+    col {
+        display: table-column
+    }
+
+    colgroup {
+        display: table-column-group
+    }
+
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit
+    }
+
+    td,
+    th {
+        display: table-cell;
+        vertical-align: inherit
+    }
+
+    th {
+        font-weight: bold
+    }
+
+    caption {
+        display: table-caption;
+        text-align: -webkit-center
+    }
+
+    /* lists */
+    ul,
+    menu,
+    dir {
+        display: block;
+        list-style-type: disc;
+        -webkit-margin-before: 1__qem;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        -webkit-padding-start: 40px
+    }
+
+    ol {
+        display: block;
+        list-style-type: decimal;
+        -webkit-margin-before: 1__qem;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        -webkit-padding-start: 40px
+    }
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    ul ul,
+    ol ul {
+        list-style-type: circle
+    }
+
+    ol ol ul,
+    ol ul ul,
+    ul ol ul,
+    ul ul ul {
+        list-style-type: square
+    }
+
+    dd {
+        display: block;
+        -webkit-margin-start: 40px
+    }
+
+    dl {
+        display: block;
+        -webkit-margin-before: 1__qem;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+    }
+
+    dt {
+        display: block
+    }
+
+    ol ul,
+    ul ol,
+    ul ul,
+    ol ol {
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0
+    }
+
+    /* form elements */
+    form {
+        display: block;
+        margin-top: 0__qem;
+    }
+
+    label {
+        cursor: default;
+    }
+
+    legend {
+        display: block;
+        -webkit-padding-start: 2px;
+        -webkit-padding-end: 2px;
+        border: none
+    }
+
+    fieldset {
+        display: block;
+        -webkit-margin-start: 2px;
+        -webkit-margin-end: 2px;
+        -webkit-padding-before: 0.35em;
+        -webkit-padding-start: 0.75em;
+        -webkit-padding-end: 0.75em;
+        -webkit-padding-after: 0.625em;
+        border: 2px groove ThreeDFace;
+        min-width: -webkit-min-content;
+    }
+
+    button {
+        -webkit-appearance: button;
+    }
+
+    /* Form controls don't go vertical. */
+    input,
+    textarea,
+    keygen,
+    select,
+    button,
+    meter,
+    progress {
+        -webkit-writing-mode: horizontal-tb !important;
+    }
+
+    input,
+    textarea,
+    keygen,
+    select,
+    button {
+        margin: 0__qem;
+        font: -webkit-small-control;
+        text-rendering: auto;
+        /* FIXME: Remove when tabs work with optimizeLegibility. */
+        color: initial;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+    }
+
+    input[type="hidden"i] {
+        display: none
+    }
+
+    input {
+        -webkit-appearance: textfield;
+        padding: 1px;
+        background-color: white;
+        border: 2px inset;
+        -webkit-rtl-ordering: logical;
+        -webkit-user-select: text;
+        cursor: auto;
+    }
+
+    input[type="search"i] {
+        -webkit-appearance: searchfield;
+        box-sizing: border-box;
+    }
+
+    input::-webkit-textfield-decoration-container {
+        display: flex;
+        align-items: center;
+        -webkit-user-modify: read-only !important;
+        content: none !important;
+    }
+
+    input[type="search"i]::-webkit-textfield-decoration-container {
+        direction: ltr;
+    }
+
+    input::-webkit-clear-button {
+        -webkit-appearance: searchfield-cancel-button;
+        display: inline-block;
+        flex: none;
+        -webkit-user-modify: read-only !important;
+        -webkit-margin-start: 2px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    input:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-clear-button {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    input[type="search"i]::-webkit-search-cancel-button {
+        -webkit-appearance: searchfield-cancel-button;
+        display: block;
+        flex: none;
+        -webkit-user-modify: read-only !important;
+        -webkit-margin-start: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    input[type="search"i]:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-search-cancel-button {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    input[type="search"i]::-webkit-search-decoration {
+        -webkit-appearance: searchfield-decoration;
+        display: block;
+        flex: none;
+        -webkit-user-modify: read-only !important;
+        -webkit-align-self: flex-start;
+        margin: auto 0;
+    }
+
+    input[type="search"i]::-webkit-search-results-decoration {
+        -webkit-appearance: searchfield-results-decoration;
+        display: block;
+        flex: none;
+        -webkit-user-modify: read-only !important;
+        -webkit-align-self: flex-start;
+        margin: auto 0;
+    }
+
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: inner-spin-button;
+        display: inline-block;
+        cursor: default;
+        flex: none;
+        align-self: stretch;
+        -webkit-user-select: none;
+        -webkit-user-modify: read-only !important;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    input:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-inner-spin-button {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    keygen,
+    select {
+        border-radius: 5px;
+    }
+
+    keygen::-webkit-keygen-select {
+        margin: 0px;
+    }
+
+    textarea {
+        -webkit-appearance: textarea;
+        background-color: white;
+        border: 1px solid;
+        -webkit-rtl-ordering: logical;
+        -webkit-user-select: text;
+        flex-direction: column;
+        resize: auto;
+        cursor: auto;
+        padding: 2px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    ::-webkit-input-placeholder {
+        -webkit-text-security: none;
+        color: darkGray;
+        pointer-events: none !important;
+    }
+
+    input::-webkit-input-placeholder {
+        white-space: pre;
+        word-wrap: normal;
+        overflow: hidden;
+        -webkit-user-modify: read-only !important;
+    }
+
+    input[type="password"i] {
+        -webkit-text-security: disc !important;
+    }
+
+    input[type="hidden"i],
+    input[type="image"i],
+    input[type="file"i] {
+        -webkit-appearance: initial;
+        padding: initial;
+        background-color: initial;
+        border: initial;
+    }
+
+    input[type="file"i] {
+        align-items: baseline;
+        color: inherit;
+        text-align: start !important;
+    }
+
+    input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+        background-color: #FAFFBD !important;
+        background-image: none !important;
+        color: #000000 !important;
+    }
+
+    input[type="radio"i],
+    input[type="checkbox"i] {
+        margin: 3px 0.5ex;
+        padding: initial;
+        background-color: initial;
+        border: initial;
+    }
+
+    input[type="button"i],
+    input[type="submit"i],
+    input[type="reset"i] {
+        -webkit-appearance: push-button;
+        -webkit-user-select: none;
+        white-space: pre
+    }
+
+    input[type="file"i]::-webkit-file-upload-button {
+        -webkit-appearance: push-button;
+        -webkit-user-modify: read-only !important;
+        white-space: nowrap;
+        margin: 0;
+        font-size: inherit;
+    }
+
+    input[type="button"i],
+    input[type="submit"i],
+    input[type="reset"i],
+    input[type="file"i]::-webkit-file-upload-button,
+    button {
+        align-items: flex-start;
+        text-align: center;
+        cursor: default;
+        color: ButtonText;
+        padding: 2px 6px 3px 6px;
+        border: 2px outset ButtonFace;
+        background-color: ButtonFace;
+        box-sizing: border-box
+    }
+
+    input[type="range"i] {
+        -webkit-appearance: slider-horizontal;
+        padding: initial;
+        border: initial;
+        margin: 2px;
+        color: #909090;
+    }
+
+    input[type="range"i]::-webkit-slider-container,
+    input[type="range"i]::-webkit-media-slider-container {
+        flex: 1;
+        min-width: 0;
+        box-sizing: border-box;
+        -webkit-user-modify: read-only !important;
+        display: flex;
+    }
+
+    input[type="range"i]::-webkit-slider-runnable-track {
+        flex: 1;
+        min-width: 0;
+        -webkit-align-self: center;
+        box-sizing: border-box;
+        -webkit-user-modify: read-only !important;
+        display: block;
+    }
+
+    input[type="range"i]::-webkit-slider-thumb,
+    input[type="range"i]::-webkit-media-slider-thumb {
+        -webkit-appearance: sliderthumb-horizontal;
+        box-sizing: border-box;
+        -webkit-user-modify: read-only !important;
+        display: block;
+    }
+
+    input[type="button"i]:disabled,
+    input[type="submit"i]:disabled,
+    input[type="reset"i]:disabled,
+    input[type="file"i]:disabled::-webkit-file-upload-button,
+    button:disabled,
+    select:disabled,
+    keygen:disabled,
+    optgroup:disabled,
+    option:disabled,
+    select[disabled]>option {
+        color: GrayText
+    }
+
+    input[type="button"i]:active,
+    input[type="submit"i]:active,
+    input[type="reset"i]:active,
+    input[type="file"i]:active::-webkit-file-upload-button,
+    button:active {
+        border-style: inset
+    }
+
+    input[type="button"i]:active:disabled,
+    input[type="submit"i]:active:disabled,
+    input[type="reset"i]:active:disabled,
+    input[type="file"i]:active:disabled::-webkit-file-upload-button,
+    button:active:disabled {
+        border-style: outset
+    }
+
+    option:-internal-spatial-navigation-focus {
+        outline: black dashed 1px;
+        outline-offset: -1px;
+    }
+
+    datalist {
+        display: none
+    }
+
+    area {
+        display: inline;
+        cursor: pointer;
+    }
+
+    param {
+        display: none
+    }
+
+    input[type="checkbox"i] {
+        -webkit-appearance: checkbox;
+        box-sizing: border-box;
+    }
+
+    input[type="radio"i] {
+        -webkit-appearance: radio;
+        box-sizing: border-box;
+    }
+
+    input[type="color"i] {
+        -webkit-appearance: square-button;
+        width: 44px;
+        height: 23px;
+        background-color: ButtonFace;
+        /* Same as native_theme_base. */
+        border: 1px #a9a9a9 solid;
+        padding: 1px 2px;
+    }
+
+    input[type="color"i]::-webkit-color-swatch-wrapper {
+        display: flex;
+        padding: 4px 2px;
+        box-sizing: border-box;
+        -webkit-user-modify: read-only !important;
+        width: 100%;
+        height: 100%
+    }
+
+    input[type="color"i]::-webkit-color-swatch {
+        background-color: #000000;
+        border: 1px solid #777777;
+        flex: 1;
+        min-width: 0;
+        -webkit-user-modify: read-only !important;
+    }
+
+    input[type="color"i][list] {
+        -webkit-appearance: menulist;
+        width: 88px;
+        height: 23px
+    }
+
+    input[type="color"i][list]::-webkit-color-swatch-wrapper {
+        padding-left: 8px;
+        padding-right: 24px;
+    }
+
+    input[type="color"i][list]::-webkit-color-swatch {
+        border-color: #000000;
+    }
+
+    input::-webkit-calendar-picker-indicator {
+        display: inline-block;
+        width: 0.66em;
+        height: 0.66em;
+        padding: 0.17em 0.34em;
+        -webkit-user-modify: read-only !important;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    input::-webkit-calendar-picker-indicator:hover {
+        background-color: #eee;
+    }
+
+    input:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-calendar-picker-indicator,
+    input::-webkit-calendar-picker-indicator:focus {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    input[type="date"i]:disabled::-webkit-clear-button,
+    input[type="date"i]:disabled::-webkit-inner-spin-button,
+    input[type="datetime-local"i]:disabled::-webkit-clear-button,
+    input[type="datetime-local"i]:disabled::-webkit-inner-spin-button,
+    input[type="month"i]:disabled::-webkit-clear-button,
+    input[type="month"i]:disabled::-webkit-inner-spin-button,
+    input[type="week"i]:disabled::-webkit-clear-button,
+    input[type="week"i]:disabled::-webkit-inner-spin-button,
+    input:disabled::-webkit-calendar-picker-indicator,
+    input[type="date"i][readonly]::-webkit-clear-button,
+    input[type="date"i][readonly]::-webkit-inner-spin-button,
+    input[type="datetime-local"i][readonly]::-webkit-clear-button,
+    input[type="datetime-local"i][readonly]::-webkit-inner-spin-button,
+    input[type="month"i][readonly]::-webkit-clear-button,
+    input[type="month"i][readonly]::-webkit-inner-spin-button,
+    input[type="week"i][readonly]::-webkit-clear-button,
+    input[type="week"i][readonly]::-webkit-inner-spin-button,
+    input[readonly]::-webkit-calendar-picker-indicator {
+        visibility: hidden;
+    }
+
+    select {
+        -webkit-appearance: menulist;
+        box-sizing: border-box;
+        align-items: center;
+        border: 1px solid;
+        white-space: pre;
+        -webkit-rtl-ordering: logical;
+        color: black;
+        background-color: white;
+        cursor: default;
+    }
+
+    select:not(:-internal-list-box) {
+        overflow: visible !important;
+    }
+
+    select:-internal-list-box {
+        -webkit-appearance: listbox;
+        align-items: flex-start;
+        border: 1px inset gray;
+        border-radius: initial;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        vertical-align: text-bottom;
+        -webkit-user-select: none;
+        white-space: nowrap;
+    }
+
+    optgroup {
+        font-weight: bolder;
+        display: block;
+    }
+
+    option {
+        font-weight: normal;
+        display: block;
+        padding: 0 2px 1px 2px;
+        white-space: pre;
+        min-height: 1.2em;
+    }
+
+    select:-internal-list-box optgroup option:before {
+        content: "\00a0\00a0\00a0\00a0";
+        ;
+    }
+
+    select:-internal-list-box option,
+    select:-internal-list-box optgroup {
+        line-height: initial !important;
+    }
+
+    select:-internal-list-box:focus option:checked {
+        background-color: -internal-active-list-box-selection !important;
+        color: -internal-active-list-box-selection-text !important;
+    }
+
+    select:-internal-list-box option:checked {
+        background-color: -internal-inactive-list-box-selection !important;
+        color: -internal-inactive-list-box-selection-text !important;
+    }
+
+    select:-internal-list-box:disabled option:checked,
+    select:-internal-list-box option:checked:disabled {
+        color: gray !important;
+    }
+
+    select:-internal-list-box hr {
+        border-style: none;
+    }
+
+    output {
+        display: inline;
+    }
+
+    /* meter */
+    meter {
+        -webkit-appearance: meter;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 1em;
+        width: 5em;
+        vertical-align: -0.2em;
+    }
+
+    meter::-webkit-meter-inner-element {
+        -webkit-appearance: inherit;
+        box-sizing: inherit;
+        -webkit-user-modify: read-only !important;
+        height: 100%;
+        width: 100%;
+    }
+
+    meter::-webkit-meter-bar {
+        background: linear-gradient(to bottom, #ddd, #eee 20%, #ccc 45%, #ccc 55%, #ddd);
+        height: 100%;
+        width: 100%;
+        -webkit-user-modify: read-only !important;
+        box-sizing: border-box;
+    }
+
+    meter::-webkit-meter-optimum-value {
+        background: linear-gradient(to bottom, #ad7, #cea 20%, #7a3 45%, #7a3 55%, #ad7);
+        height: 100%;
+        -webkit-user-modify: read-only !important;
+        box-sizing: border-box;
+    }
+
+    meter::-webkit-meter-suboptimum-value {
+        background: linear-gradient(to bottom, #fe7, #ffc 20%, #db3 45%, #db3 55%, #fe7);
+        height: 100%;
+        -webkit-user-modify: read-only !important;
+        box-sizing: border-box;
+    }
+
+    meter::-webkit-meter-even-less-good-value {
+        background: linear-gradient(to bottom, #f77, #fcc 20%, #d44 45%, #d44 55%, #f77);
+        height: 100%;
+        -webkit-user-modify: read-only !important;
+        box-sizing: border-box;
+    }
+
+    /* progress */
+    progress {
+        -webkit-appearance: progress-bar;
+        box-sizing: border-box;
+        display: inline-block;
+        height: 1em;
+        width: 10em;
+        vertical-align: -0.2em;
+    }
+
+    progress::-webkit-progress-inner-element {
+        -webkit-appearance: inherit;
+        box-sizing: inherit;
+        -webkit-user-modify: read-only;
+        height: 100%;
+        width: 100%;
+    }
+
+    progress::-webkit-progress-bar {
+        background-color: gray;
+        height: 100%;
+        width: 100%;
+        -webkit-user-modify: read-only !important;
+        box-sizing: border-box;
+    }
+
+    progress::-webkit-progress-value {
+        background-color: green;
+        height: 100%;
+        width: 50%;
+        /* should be removed later */
+        -webkit-user-modify: read-only !important;
+        box-sizing: border-box;
+    }
+
+    /* inline elements */
+    u,
+    ins {
+        text-decoration: underline
+    }
+
+    strong,
+    b {
+        font-weight: bold
+    }
+
+    i,
+    cite,
+    em,
+    var,
+    address,
+    dfn {
+        font-style: italic
+    }
+
+    tt,
+    code,
+    kbd,
+    samp {
+        font-family: monospace
+    }
+
+    pre,
+    xmp,
+    plaintext,
+    listing {
+        display: block;
+        font-family: monospace;
+        white-space: pre;
+        margin: 1__qem 0
+    }
+
+    mark {
+        background-color: yellow;
+        color: black
+    }
+
+    big {
+        font-size: larger
+    }
+
+    small {
+        font-size: smaller
+    }
+
+    s,
+    strike,
+    del {
+        text-decoration: line-through
+    }
+
+    sub {
+        vertical-align: sub;
+        font-size: smaller
+    }
+
+    sup {
+        vertical-align: super;
+        font-size: smaller
+    }
+
+    nobr {
+        white-space: nowrap
+    }
+
+    /* states */
+    :focus {
+        outline: auto 5px -webkit-focus-ring-color
+    }
+
+    /* Read-only text fields do not show a focus ring but do still receive focus */
+    html:focus,
+    body:focus,
+    input[readonly]:focus {
+        outline: none
+    }
+
+    embed:focus,
+    iframe:focus,
+    object:focus {
+        outline: none
+    }
+
+    input:focus,
+    textarea:focus,
+    keygen:focus,
+    select:focus {
+        outline-offset: -2px
+    }
+
+    input[type="button"i]:focus,
+    input[type="checkbox"i]:focus,
+    input[type="file"i]:focus,
+    input[type="hidden"i]:focus,
+    input[type="image"i]:focus,
+    input[type="radio"i]:focus,
+    input[type="reset"i]:focus,
+    input[type="search"i]:focus,
+    input[type="submit"i]:focus,
+    input[type="file"i]:focus::-webkit-file-upload-button {
+        outline-offset: 0
+    }
+
+    a:-webkit-any-link {
+        color: -webkit-link;
+        text-decoration: underline;
+        cursor: auto;
+    }
+
+    a:-webkit-any-link:active {
+        color: -webkit-activelink
+    }
+
+    /* HTML5 ruby elements */
+    ruby,
+    rt {
+        text-indent: 0;
+        /* blocks used for ruby rendering should not trigger this */
+    }
+
+    rt {
+        line-height: normal;
+        -webkit-text-emphasis: none;
+    }
+
+    ruby>rt {
+        display: block;
+        font-size: 50%;
+        text-align: start;
+    }
+
+    ruby>rp {
+        display: none;
+    }
+
+    /* other elements */
+    noframes {
+        display: none
+    }
+
+    frameset,
+    frame {
+        display: block
+    }
+
+    frameset {
+        border-color: inherit
+    }
+
+    iframe {
+        border: 2px inset
+    }
+
+    details {
+        display: block
+    }
+
+    summary {
+        display: block
+    }
+
+    summary::-webkit-details-marker {
+        display: inline-block;
+        width: 0.66em;
+        height: 0.66em;
+        -webkit-margin-end: 0.4em;
+    }
+
+    template {
+        display: none
+    }
+
+    bdi,
+    output {
+        unicode-bidi: -webkit-isolate;
+    }
+
+    bdo {
+        unicode-bidi: bidi-override;
+    }
+
+    textarea[dir=auto i] {
+        unicode-bidi: -webkit-plaintext;
+    }
+
+    dialog:not([open]) {
+        display: none
+    }
+
+    dialog {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: -webkit-fit-content;
+        height: -webkit-fit-content;
+        margin: auto;
+        border: solid;
+        padding: 1em;
+        background: white;
+        color: black
+    }
+
+    dialog::backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.1)
+    }
+
+    /* page */
+    @page {
+        /* FIXME: Define the right default values for page properties. */
+        size: auto;
+        margin: auto;
+        padding: 0px;
+        border-width: 0px;
+    }
+
+    /* Disable multicol in printing, since it's not implemented properly. See crbug.com/99358 */
+    @media print {
+        * {
+            -webkit-columns: auto !important;
+        }
+    }
+
+    /* noscript is handled internally, as it depends on settings. */
+    </style>
+</head>
+
+<body>
+    <h1>Diagnostic links and tools</h1>
+    <ul>
+        <li><a href="https://www.mydevice.io/">mydevice.io : web devices capabilities</a></li>
+      <li><a href="https://cape.springernature.com/quickView?aid=d0b39e18474947629f9537eb435383d0">test</a></li>
+    </ul>
+    <div>
+        <form id="form_select" action="#">
+            <label for="lang">Language</label>
+            <select name="options" id="lang">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+                <option value="maybe">maybe</option>
+                <option value="pass">pass</option>
+            </select>
+            <radio></radio>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <div>
+        <form id="form_radio">
+            <input type="radio" id="radio_1" name="radio" value="yes" />
+            <label for="radio_1">Yes</label>
+            <input type="radio" id="radio_2" name="radio" value="no" />
+            <label for="radio_2">No</label>
+            <input type="radio" id="radio_3" name="radio" value="maybe" />
+            <label for="radio_3">Maybe</label>
+        </form>
+    </div>
+</body>
+<div>
+    <form action="" # id="form_select">
+        <select id="CountryCode" aria-label="Location" class="u-form-control" data-val="true" data-val-required="Please select your location" name="CountrySelectionModel.CountryCode" required="">
+            <option disabled="disabled" selected="selected" value="">Select your location</option>
+            <option value="AF">Afghanistan</option>
+            <option value="AX">Åland Islands</option>
+            <option value="AL">Albania</option>
+            <option value="DZ">Algeria</option>
+            <option value="AS">American Samoa</option>
+            <option value="AD">Andorra</option>
+            <option value="AO">Angola</option>
+            <option value="AI">Anguilla</option>
+            <option value="AQ">Antarctica</option>
+            <option value="AG">Antigua and Barbuda</option>
+            <option value="AR">Argentina</option>
+            <option value="AM">Armenia</option>
+            <option value="AW">Aruba</option>
+            <option value="AU">Australia</option>
+            <option value="AT">Austria</option>
+            <option value="AZ">Azerbaijan</option>
+            <option value="BS">Bahamas</option>
+            <option value="BH">Bahrain</option>
+            <option value="BD">Bangladesh</option>
+            <option value="BB">Barbados</option>
+            <option value="BY">Belarus</option>
+            <option value="BE">Belgium</option>
+            <option value="BZ">Belize</option>
+            <option value="BJ">Benin</option>
+            <option value="BM">Bermuda</option>
+            <option value="BT">Bhutan</option>
+            <option value="BO">Bolivia</option>
+            <option value="BA">Bosnia and Herzegovina</option>
+            <option value="BW">Botswana</option>
+            <option value="BV">Bouvet Island</option>
+            <option value="BR">Brazil</option>
+            <option value="VG">British Virgin Islands</option>
+            <option value="BN">Brunei</option>
+            <option value="BG">Bulgaria</option>
+            <option value="BF">Burkina Faso</option>
+            <option value="BI">Burundi</option>
+            <option value="KH">Cambodia</option>
+            <option value="CM">Cameroon</option>
+            <option value="CA">Canada</option>
+            <option value="CV">Cape Verde</option>
+            <option value="BQ">Caribbean Netherlands</option>
+            <option value="KY">Cayman Islands</option>
+            <option value="CF">Central African Republic</option>
+            <option value="TD">Chad</option>
+            <option value="CL">Chile</option>
+            <option value="CN">Chinese Mainland</option>
+            <option value="CX">Christmas Island</option>
+            <option value="CC">Cocos (Keeling) Islands</option>
+            <option value="CO">Colombia</option>
+            <option value="KM">Comoros</option>
+            <option value="CG">Congo - Brazzaville</option>
+            <option value="CD">Congo - Kinshasa</option>
+            <option value="CK">Cook Islands</option>
+            <option value="CR">Costa Rica</option>
+            <option value="CI">Côte d’Ivoire</option>
+            <option value="HR">Croatia</option>
+            <option value="CU">Cuba</option>
+            <option value="CW">Curaçao</option>
+            <option value="CY">Cyprus</option>
+            <option value="CZ">Czech Republic</option>
+            <option value="DK">Denmark</option>
+            <option value="DJ">Djibouti</option>
+            <option value="DM">Dominica</option>
+            <option value="DO">Dominican Republic</option>
+            <option value="EC">Ecuador</option>
+            <option value="EG">Egypt</option>
+            <option value="SV">El Salvador</option>
+            <option value="GQ">Equatorial Guinea</option>
+            <option value="ER">Eritrea</option>
+            <option value="EE">Estonia</option>
+            <option value="SZ">Eswatini</option>
+            <option value="ET">Ethiopia</option>
+            <option value="FK">Falkland Islands</option>
+            <option value="FO">Faroe Islands</option>
+            <option value="FJ">Fiji</option>
+            <option value="FI">Finland</option>
+            <option value="FR">France</option>
+            <option value="GF">French Guiana</option>
+            <option value="PF">French Polynesia</option>
+            <option value="TF">French Southern Territories</option>
+            <option value="GA">Gabon</option>
+            <option value="GM">Gambia</option>
+            <option value="GE">Georgia</option>
+            <option value="DE">Germany</option>
+            <option value="GH">Ghana</option>
+            <option value="GI">Gibraltar</option>
+            <option value="GR">Greece</option>
+            <option value="GL">Greenland</option>
+            <option value="GD">Grenada</option>
+            <option value="GP">Guadeloupe</option>
+            <option value="GU">Guam</option>
+            <option value="GT">Guatemala</option>
+            <option value="GG">Guernsey</option>
+            <option value="GN">Guinea</option>
+            <option value="GW">Guinea-Bissau</option>
+            <option value="GY">Guyana</option>
+            <option value="HT">Haiti</option>
+            <option value="HM">Heard &amp; McDonald Islands</option>
+            <option value="HN">Honduras</option>
+            <option value="HK">Hong Kong</option>
+            <option value="HU">Hungary</option>
+            <option value="IS">Iceland</option>
+            <option value="IN">India</option>
+            <option value="ID">Indonesia</option>
+            <option value="IR">Iran</option>
+            <option value="IQ">Iraq</option>
+            <option value="IE">Ireland</option>
+            <option value="IM">Isle of Man</option>
+            <option value="IL">Israel</option>
+            <option value="IT">Italy</option>
+            <option value="JM">Jamaica</option>
+            <option value="JP">Japan</option>
+            <option value="JE">Jersey</option>
+            <option value="JO">Jordan</option>
+            <option value="KZ">Kazakhstan</option>
+            <option value="KE">Kenya</option>
+            <option value="KI">Kiribati</option>
+            <option value="KW">Kuwait</option>
+            <option value="KG">Kyrgyzstan</option>
+            <option value="LA">Laos</option>
+            <option value="LV">Latvia</option>
+            <option value="LB">Lebanon</option>
+            <option value="LS">Lesotho</option>
+            <option value="LR">Liberia</option>
+            <option value="LY">Libya</option>
+            <option value="LI">Liechtenstein</option>
+            <option value="LT">Lithuania</option>
+            <option value="LU">Luxembourg</option>
+            <option value="MO">Macau</option>
+            <option value="MK">Macedonia</option>
+            <option value="MG">Madagascar</option>
+            <option value="MW">Malawi</option>
+            <option value="MY">Malaysia</option>
+            <option value="MV">Maldives</option>
+            <option value="ML">Mali</option>
+            <option value="MT">Malta</option>
+            <option value="MH">Marshall Islands</option>
+            <option value="MQ">Martinique</option>
+            <option value="MR">Mauritania</option>
+            <option value="MU">Mauritius</option>
+            <option value="YT">Mayotte</option>
+            <option value="MX">Mexico</option>
+            <option value="FM">Micronesia</option>
+            <option value="MD">Moldova</option>
+            <option value="MC">Monaco</option>
+            <option value="MN">Mongolia</option>
+            <option value="ME">Montenegro</option>
+            <option value="MS">Montserrat</option>
+            <option value="MA">Morocco</option>
+            <option value="MZ">Mozambique</option>
+            <option value="MM">Myanmar (Burma)</option>
+            <option value="NA">Namibia</option>
+            <option value="NR">Nauru</option>
+            <option value="NP">Nepal</option>
+            <option value="NL">Netherlands</option>
+            <option value="NC">New Caledonia</option>
+            <option value="NZ">New Zealand</option>
+            <option value="NI">Nicaragua</option>
+            <option value="NE">Niger</option>
+            <option value="NG">Nigeria</option>
+            <option value="NU">Niue</option>
+            <option value="NF">Norfolk Island</option>
+            <option value="KP">North Korea</option>
+            <option value="MP">Northern Mariana Islands</option>
+            <option value="NO">Norway</option>
+            <option value="OM">Oman</option>
+            <option value="PK">Pakistan</option>
+            <option value="PW">Palau</option>
+            <option value="PS">Palestinian Territories</option>
+            <option value="PA">Panama</option>
+            <option value="PG">Papua New Guinea</option>
+            <option value="PY">Paraguay</option>
+            <option value="PE">Peru</option>
+            <option value="PH">Philippines</option>
+            <option value="PN">Pitcairn Islands</option>
+            <option value="PL">Poland</option>
+            <option value="PT">Portugal</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="QA">Qatar</option>
+            <option value="RE">Réunion</option>
+            <option value="RO">Romania</option>
+            <option value="RU">Russia</option>
+            <option value="RW">Rwanda</option>
+            <option value="BL">Saint Barthélemy</option>
+            <option value="SH">Saint Helena</option>
+            <option value="KN">Saint Kitts and Nevis</option>
+            <option value="LC">Saint Lucia</option>
+            <option value="MF">Saint Martin</option>
+            <option value="PM">Saint Pierre and Miquelon</option>
+            <option value="WS">Samoa</option>
+            <option value="SM">San Marino</option>
+            <option value="ST">São Tomé and Príncipe</option>
+            <option value="SA">Saudi Arabia</option>
+            <option value="SN">Senegal</option>
+            <option value="RS">Serbia</option>
+            <option value="SC">Seychelles</option>
+            <option value="SL">Sierra Leone</option>
+            <option value="SG">Singapore</option>
+            <option value="SX">Sint Maarten</option>
+            <option value="SK">Slovakia</option>
+            <option value="SI">Slovenia</option>
+            <option value="SB">Solomon Islands</option>
+            <option value="SO">Somalia</option>
+            <option value="ZA">South Africa</option>
+            <option value="GS">South Georgia &amp; South Sandwich Islands</option>
+            <option value="KR">South Korea</option>
+            <option value="SS">South Sudan</option>
+            <option value="ES">Spain</option>
+            <option value="LK">Sri Lanka</option>
+            <option value="VC">St. Vincent &amp; Grenadines</option>
+            <option value="SD">Sudan</option>
+            <option value="SR">Suriname</option>
+            <option value="SJ">Svalbard and Jan Mayen</option>
+            <option value="SE">Sweden</option>
+            <option value="CH">Switzerland</option>
+            <option value="SY">Syria</option>
+            <option value="TW">Taiwan</option>
+            <option value="TJ">Tajikistan</option>
+            <option value="TZ">Tanzania</option>
+            <option value="TH">Thailand</option>
+            <option value="TL">Timor-Leste</option>
+            <option value="TG">Togo</option>
+            <option value="TK">Tokelau</option>
+            <option value="TO">Tonga</option>
+            <option value="TT">Trinidad and Tobago</option>
+            <option value="TN">Tunisia</option>
+            <option value="TR">Türkiye</option>
+            <option value="TM">Turkmenistan</option>
+            <option value="TC">Turks and Caicos Islands</option>
+            <option value="TV">Tuvalu</option>
+            <option value="UM">U.S. Outlying Islands</option>
+            <option value="VI">U.S. Virgin Islands</option>
+            <option value="UG">Uganda</option>
+            <option value="UA">Ukraine</option>
+            <option value="AE">United Arab Emirates</option>
+            <option value="GB">United Kingdom</option>
+            <option value="US">United States</option>
+            <option value="UY">Uruguay</option>
+            <option value="UZ">Uzbekistan</option>
+            <option value="VU">Vanuatu</option>
+            <option value="VA">Vatican City</option>
+            <option value="VE">Venezuela</option>
+            <option value="VN">Vietnam</option>
+            <option value="WF">Wallis and Futuna</option>
+            <option value="EH">Western Sahara</option>
+            <option value="YE">Yemen</option>
+            <option value="ZM">Zambia</option>
+            <option value="ZW">Zimbabwe</option>
+        </select>
+    </form>
+</div>
+
+</html>
